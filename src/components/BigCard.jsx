@@ -1,8 +1,4 @@
 function BigCard(props) {
-  function colorizer(today, yest) {
-    return today > yest ? "green" : today < yest ? "red" : "white";
-  }
-
   return (
     <>
       <div className="bigCard">
@@ -15,7 +11,7 @@ function BigCard(props) {
           <div className="flwrsBody">{props.flwrs.toString().length > 4 ? `${props.flwrs.toString().slice(0, 2)}k` : props.flwrs}</div>
           <div className="bodyText">Followers</div>
         </div>
-        <div className="bigCardFooter" style={{ color: props.gainT > props.gainY ? "hsl(163, 72%, 41%)" : props.gainT < props.gainY ? "hsl(356, 69%, 56%)" : "hsl(0, 0%, 100%)" }}>
+        <div className="bigCardFooter" style={{ color: props.gainT > props.gainY ? "hsl(163, 72%, 41%)" : props.gainT < props.gainY ? "hsl(356, 69%, 56%)" : "hsl(163, 72%, 41%)" }}>
           <div className="footerSign" style={{ color: props.gainT > props.gainY ? "hsl(163, 72%, 41%)" : props.gainT < props.gainY ? "hsl(356, 69%, 56%)" : "hsl(163, 72%, 41%)" }}>
             {props.gainT > props.gainY ? "▴" : props.gainT < props.gainY ? "▾" : "▴"}
           </div>
